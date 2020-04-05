@@ -101,7 +101,41 @@ composer require --dev phpunit/phpunit ^7
 
 ## <a name="parte5">5 - Criando o primeiro Teste</a>
 
+- projeto_1_aula/phpunit.xml
 
+```xml
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpunit bootstrap="vendor/autoload.php">
+    <testsuites>
+        <testsuite name="testes">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
+```
+
+- projeto_1_aula/tests/MeuPrimeiroTest.php
+
+```php
+<?php
+
+use PHPUnit\Framework\TestCase;
+
+class MeuPrimeiroTest extends TestCase{
+    public function testPrimeiroTestes(){
+        $teste = 1 == 1;
+        $this->assertTrue($teste);
+    }
+}
+```
+
+```
+
+#########__   Rodando com a versão atual do phpunit           __########################
+
+php vendor/phpunit/phpunit/phpunit
+
+```
 
 [Voltar ao Índice](#indice)
 
