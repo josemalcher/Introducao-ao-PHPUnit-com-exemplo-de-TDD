@@ -144,7 +144,38 @@ php vendor/phpunit/phpunit/phpunit
 
 ## <a name="parte6">6 - Teste de Atributos em uma Classe</a>
 
+- projeto_1_aula/app/Calculadora.php
 
+```php
+<?php
+namespace App;
+
+class Calculadora
+{
+    private $valorA;
+    private $valorB;
+    private $operador;
+    private $resultado;
+}
+```
+
+- projeto_1_aula/tests/CalculadoraTest.php
+
+```php
+<?php
+use PHPUnit\Framework\TestCase;
+use App\Calculadora;
+
+class CalculadoraTest extends TestCase{
+    public function testeAtributosCalculadora()
+    {
+        $this->assertClassHasAttribute('valorA' ,   Calculadora::class);
+        $this->assertClassHasAttribute('valorB', Calculadora::class);
+        $this->assertClassHasAttribute('operador', Calculadora::class);
+        $this->assertClassHasAttribute('resultado', Calculadora::class);
+    }
+}
+```
 
 [Voltar ao Índice](#indice)
 
