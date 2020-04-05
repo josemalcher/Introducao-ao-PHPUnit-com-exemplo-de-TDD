@@ -30,13 +30,14 @@ Primeiros passos no desenvolvimento com testes usando PHPUnit
 
 
 [Voltar ao Índice](#indice)
-
+ 
 ---
 
 
 ## <a name="parte2">2 - Requisitos para o Curso</a>
 
-
+- PHP 
+- COMPOSER
 
 [Voltar ao Índice](#indice)
 
@@ -45,7 +46,7 @@ Primeiros passos no desenvolvimento com testes usando PHPUnit
 
 ## <a name="parte3">3 - O que é PHPUnit e TDD</a>
 
-
+- https://phpunit.readthedocs.io/pt_BR/latest/
 
 [Voltar ao Índice](#indice)
 
@@ -53,6 +54,43 @@ Primeiros passos no desenvolvimento com testes usando PHPUnit
 
 
 ## <a name="parte4">4 - Instalando o PHPUnit</a>
+
+```
+composer init
+
+```
+
+```json
+{
+    "name": "josem/projeto_1_aula",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "josemalcher",
+            "email": "contato@josemalcher.net"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}
+
+```
+
+```
+composer update
+```
+
+- Instalar o PHPUnit
+
+```
+composer require --dev phpunit/phpunit ^7
+```
+
 
 
 
