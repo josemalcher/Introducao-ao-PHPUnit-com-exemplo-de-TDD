@@ -218,6 +218,17 @@ class CalculadoraTest extends TestCase
 
 ## <a name="parte8">8 - Trabalhando com Anotação @depends</a>
 
+- https://phpunit.readthedocs.io/pt_BR/latest/annotations.html
+
+```
+
+    /**
+     * @depends testeAtributosCalculadora
+     *
+     *   
+     */
+
+```
 
 
 [Voltar ao Índice](#indice)

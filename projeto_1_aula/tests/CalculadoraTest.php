@@ -13,6 +13,12 @@ class CalculadoraTest extends TestCase
         $this->assertClassHasAttribute('resultado', Calculadora::class);
     }
 
+    /**
+     * @depends testeAtributosCalculadora
+     *
+     *
+     */
+
     public function testMetodosCalculadora()
     {
         $this->assertTrue(method_exists(Calculadora::class, 'getValorA'), "Falta o método Get Resultado");
