@@ -1,4 +1,5 @@
 <?php
+
 namespace App;
 
 class Calculadora
@@ -8,16 +9,35 @@ class Calculadora
     private $operador;
     private $resultado;
 
-    public function getValorA(){
+    /**
+     * Calculadora constructor.
+     */
+    public function __construct($valorA, $valorB, $operador)
+    {
+        $this->valorA = $valorA;
+        $this->valorB = $valorB;
+        $this->operador = $operador;
+    }
+
+
+    public function getValorA()
+    {
+        return $this->valorA;
+    }
+
+    public function getValorB()
+    {
+        return $this->valorB;
 
     }
-    public function getValorB(){
 
+    public function getOperador()
+    {
+        return $this->operador;
     }
-    public function getOperador(){
 
-    }
-    public function getResultado(){
+    public function getResultado()
+    {
 
     }
 }
