@@ -38,6 +38,23 @@ class Calculadora
 
     public function getResultado()
     {
+        if ($this->getOperador() == "Soma") {
+            return $this->getValorA() + $this->getValorB();
+        } elseif ($this->getOperador() == "Subtrair") {
+            return $this->getValorA() - $this->getValorB();
+        } elseif ($this->getOperador() == "Dividir") {
+            if ($this->getValorB() == 0) {
+                return "Não é um número!";
+            }
+            return $this->getValorA() / $this->getValorB();
+        } elseif ($this->getOperador() == "Multiplicar") {
+            return $this->getValorA() * $this->getValorB();
+        } elseif ($this->getOperador() == "Modulo") {
+            return $this->getValorA() - $this->getValorB();
+        } else {
+            return "Não há operando";
+        }
+
 
     }
 }

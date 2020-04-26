@@ -298,6 +298,32 @@ class CalculadoraTest extends TestCase
 
 ## <a name="parte10">10 - Implementando com TDD</a>
 
+[projeto_1_aula/tests/CalculadoraTest.php](projeto_1_aula/tests/CalculadoraTest.php)
+
+```php
+
+    /**
+     * @depends testConstrutorCalculadora
+     * */
+    public function testGetResultadoCalculadore()
+    {
+        $calc = new Calculadora(4, 2, "Soma");
+        $this->assertEquals(6, $calc->getResultado(), "ERRO no método getResultado");
+
+        $calc = new Calculadora(3, 2, "Soma");
+        $this->assertEquals(5, $calc->getResultado(), "ERRO no método getResultado");
+
+        $calc = new Calculadora(6, 3, "Subtrair");
+        $this->assertEquals(3, $calc->getResultado(), "ERRO no método getResultado");
+
+        $calc = new Calculadora(10, 2, "Dividir");
+        $this->assertEquals(5, $calc->getResultado(), "ERRO no método getResultado");
+
+        $calc = new Calculadora(50, 0, "Dividir");
+        $this->assertEquals("Não é um número!", $calc->getResultado(), "ERRO no método getResultado");
+    }
+```
+
 
 
 [Voltar ao Índice](#indice)
