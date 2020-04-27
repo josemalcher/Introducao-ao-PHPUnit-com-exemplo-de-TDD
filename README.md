@@ -375,7 +375,55 @@ echo $calc->getResultado();
 
 ## <a name="parte13">13 - Iniciando com Testes em Banco de Dados</a>
 
+[https://phpunit.readthedocs.io/pt_BR/latest/installation.html?highlight=DbUnit#pacotes-opcionais](https://phpunit.readthedocs.io/pt_BR/latest/installation.html?highlight=DbUnit#pacotes-opcionais)
 
+```
+composer require --dev phpunit/dbunit
+```
+
+- [projeto_1_aula/tests/produtos.xml](projeto_1_aula/tests/produtos.xml)
+
+```xml
+<dataset>
+    <table name="produtos">
+        <column>id</column>
+        <column>titulo</column>
+        <column>descricao</column>
+        <column>valor</column>
+        <row>
+            <value>1</value>
+            <value>Curso de PHPUnir</value>
+            <value>Aprenda a fazer testes no PHP</value>
+            <value>55.5</value>
+        </row>
+        <row>
+            <value>2</value>
+            <value>Curso de JS</value>
+            <value>Aprenda a JS com tal tal tal </value>
+            <value>90.5</value>
+        </row>
+    </table>
+    <table name="clientes">
+
+    </table>
+</dataset>
+```
+
+- [projeto_1_aula/tests/ProdutosTest.php](projeto_1_aula/tests/ProdutosTest.php)
+
+```php
+<?php
+
+use PHPUnit\Framework\TestCase;
+
+class ProdutosTest extends TestCase
+{
+    public function testeListaProdutos()
+    {
+        
+    }
+}
+```
 
 [Voltar ao Índice](#indice)
 
