@@ -333,7 +333,18 @@ class CalculadoraTest extends TestCase
 
 ## <a name="parte11">11 - Teste da Classe Implementada</a>
 
+```php
+<?php
 
+require_once '../vendor/autoload.php';
+
+use App\Calculadora;
+
+$calc = new Calculadora(20, 30, "Soma");
+echo $calc->getResultado();
+
+
+```
 
 [Voltar ao Índice](#indice)
 
