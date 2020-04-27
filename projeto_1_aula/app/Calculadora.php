@@ -20,6 +20,8 @@ class Calculadora
     }
 
 
+
+
     public function getValorA()
     {
         return $this->valorA;
@@ -56,5 +58,10 @@ class Calculadora
         }
 
 
+    }
+    public static function calcular(int $int_a, int $int_b, string $operador)
+    {
+        $calc = new Calculadora($int_a, $int_b, $operador);
+        return $calc->getResultado();
     }
 }

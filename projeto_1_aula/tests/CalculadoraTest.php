@@ -68,4 +68,15 @@ class CalculadoraTest extends TestCase
         $this->assertEquals("Não é um número!", $calc->getResultado(), "ERRO no método getResultado");
     }
 
+
+    /**
+     * @depends testConstrutorCalculadora
+     * */
+    public function testStaticCalculadora()
+    {
+        $resultado = Calculadora::calcular(2, 4, "Soma");
+        $this->assertEquals(6, $resultado, "Erro no método calcular - ESTÁTICO");
+
+    }
+
 }

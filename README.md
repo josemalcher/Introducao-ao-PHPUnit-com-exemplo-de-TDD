@@ -353,7 +353,20 @@ echo $calc->getResultado();
 
 ## <a name="parte12">12 - Refatorando uma Classe</a>
 
+```php
 
+    /**
+     * @depends testConstrutorCalculadora
+     * */
+    public function testStaticCalculadora()
+    {
+        $resultado = Calculadora::calcular(2, 4, "Soma");
+        $this->assertEquals(6, $resultado, "Erro no método calcular - ESTÁTICO");
+
+    }
+
+
+```
 
 [Voltar ao Índice](#indice)
 
